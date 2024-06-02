@@ -1,7 +1,29 @@
 <h1>Abhishek</h1>
-<p>{{fNAme}}</p>
-<p>{{3+5}}</p>
-<p>{{2<5}}</p>
-<p>{{a>b ? "a is greater": "b is greater"}}</p>
-<p>sum of a+b is: {{add(10,12)}}</p>
+<p>{{ fNAme }}</p>
+<p>{{ 3 + 5 }}</p>
+<p>{{ 2 < 5 }}</p>
+<p>{{ a > b ? "a is greater" : "b is greater" }}</p>
+<p>sum of a + b is: {{ add(10, 12) }}</p>
 <app-product></app-product>
+<app-add-student></app-add-student>
+
+<!-- property Binding -->
+
+<h1 [innerHTML]="heading"></h1>
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let single of studentList">
+      <td>{{ single.id }}</td>
+      <td>{{ single.name }}</td>
+      <td>{{ single.age }}</td>
+    </tr>
+  </tbody>
+  <tfoot></tfoot>
+</table>
