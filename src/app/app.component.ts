@@ -8,7 +8,14 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProductComponent, StudentModule, CommonModule, FormsModule],
+  imports: [
+    RouterOutlet,
+    ProductComponent,
+    StudentModule,
+    CommonModule,
+    FormsModule,
+    StudentModule
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -24,9 +31,9 @@ export class AppComponent {
 
   heading = 'this is heading';
   studentList = [
-    { id: 1, name: 'Abhishek shashikant shelke', age: 25,percentage:80 },
-    { id: 2, name: 'Ganesh dilip pawar', age: 30,percentage:50 },
-    { id: 3, name: 'Hemant vilas mane', age: 35,percentage:40 }
+    { id: 1, name: 'Abhishek shashikant shelke', age: 25, percentage: 80 },
+    { id: 2, name: 'Ganesh dilip pawar', age: 30, percentage: 50 },
+    { id: 3, name: 'Hemant vilas mane', age: 35, percentage: 40 }
   ];
   has = true;
   toggleHasPermission(ev: any) {
@@ -38,7 +45,21 @@ export class AppComponent {
     dob: "",
     age: "",
     mobile: "",
-    email:""
+    email: ""
   }
-  bgColor=1;
+  bgColor = 1;
+
+student1 = {
+  title: "student details",
+  name: "payal shinde",
+  age: "20",
+  email: "p@gmail.com",
+  mobile: "9766502971"
+}
+destroy=false;
+buttonClickedEventHandler(ev :any){
+  console.log(ev);
+  alert(ev);
+  this.destroy=true;
+}
 }

@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "id": "f571",
+      "Name": "abhi shelke",
+      "gender": "m",
+      "dob": "31/08/1999",
+      "mobile": "9766502971",
+      "email": "abhi@gmail.com"
+    },
+    {
+      "id": "2f50",
+      "Name": "ganesh pawar",
+      "gender": "m",
+      "dob": "31/08/1995",
+      "mobile": "9766595971",
+      "email": "ganesg@gmail.com"
+    },
+    {
+      "Name": "hemant vilas mane",
+      "gender": "f",
+      "dob": "31/08/1945",
+      "mobile": "7038297127",
+      "email": "hem420408@gmail.com",
+      "id": "deb4"
+    }
+  ]
+}
