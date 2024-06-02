@@ -91,3 +91,28 @@
       'bg-red':bgColor == 1,
       'bg-blue':bgColor !== 1
     }"> ngClass by object </div>
+
+    <!-- NG STYLE -->
+
+    <table  border="5px">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let single of studentList"
+        [ngStyle]="{
+          color:single.percentage<80? 'red' : 'green',
+        }">
+          <td>{{ single.id }}</td>
+          <td>{{ single.name }}</td>
+          <td>{{ single.age }}</td>
+          <td>{{ single.percentage }}</td>
+        </tr>
+      </tbody>
+      <tfoot></tfoot>
+    </table>
