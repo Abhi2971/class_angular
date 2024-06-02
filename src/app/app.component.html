@@ -2,28 +2,46 @@
 <p>{{ fNAme }}</p>
 <p>{{ 3 + 5 }}</p>
 <p>{{ 2 < 5 }}</p>
-<p>{{ a > b ? "a is greater" : "b is greater" }}</p>
-<p>sum of a + b is: {{ add(10, 12) }}</p>
-<app-product></app-product>
-<app-add-student></app-add-student>
+    <p>{{ a > b ? "a is greater" : "b is greater" }}</p>
+    <p>sum of a + b is: {{ add(10, 12) }}</p>
+    <app-product></app-product>
+    <app-add-student></app-add-student>
 
-<!-- property Binding -->
+    <!-- property Binding -->
 
-<h1 [innerHTML]="heading"></h1>
-<table class="table table-dark table-hover">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let single of studentList">
-      <td>{{ single.id }}</td>
-      <td>{{ single.name }}</td>
-      <td>{{ single.age }}</td>
-    </tr>
-  </tbody>
-  <tfoot></tfoot>
-</table>
+    <h1 [innerHTML]="heading"></h1>
+    <!-- NGFOR -->
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let single of studentList">
+          <td>{{ single.id }}</td>
+          <td>{{ single.name }}</td>
+          <td>{{ single.age }}</td>
+        </tr>
+      </tbody>
+      <tfoot></tfoot>
+    </table>
+    <!-- NGIF  -->
+    <button (click)="toggleHasPermission($event)">Has permission toggle</button>
+    <div *ngIf="has;else ref">
+      this will appear
+    </div>
+    <ng-template #ref>
+      <div>
+        this will not appear
+      </div>
+    </ng-template>
+
+    <!-- NGSWITCH -->
+    <div [ngSwitch]="num2">
+      <div *ngSwitchCase="10"> num is 10</div>
+      <div *ngSwitchCase="20"> num is 20</div>
+      <div *ngSwitchCase="30"> num is 30</div>
+    </div>

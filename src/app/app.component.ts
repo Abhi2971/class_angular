@@ -27,4 +27,9 @@ export class AppComponent {
     { id: 2, name: 'rahul', age: 30 },
     { id: 3, name: 'raj', age: 35 }
   ];
+  has = true;
+  toggleHasPermission(ev:any){
+    this.has=!this.has;
+  }
+  num2=20;
 }
