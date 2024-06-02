@@ -11,19 +11,26 @@
 
     <h1 [innerHTML]="heading"></h1>
     <!-- NGFOR -->
-    <table class="table table-dark table-hover">
+    <table  border="5px">
       <thead>
         <tr>
           <th>Id</th>
           <th>Name</th>
           <th>Age</th>
+          <th>percentage</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let single of studentList">
+        <tr *ngFor="let single of studentList"
+        [ngClass]="{
+          'bg-success': single.percentage >= 80,
+          'bg-warning': single.percentage > 50 && single.percentage < 80,
+          'bg-danger': single.percentage <= 50
+        }">
           <td>{{ single.id }}</td>
           <td>{{ single.name }}</td>
           <td>{{ single.age }}</td>
+          <td>{{ single.percentage }}</td>
         </tr>
       </tbody>
       <tfoot></tfoot>
@@ -73,3 +80,14 @@
     <div>
       {{student|json}}
     </div>
+
+    <!-- NG CLASS -->
+    
+    <div [ngClass]="bgColor==1 ? 'bg-red' : 'bg-blue'">ngClass</div>
+    
+    <!-- NG CLASS WITH OBJECT -->
+    
+    <div [ngClass]="{
+      'bg-red':bgColor == 1,
+      'bg-blue':bgColor !== 1
+    }"> ngClass by object </div>

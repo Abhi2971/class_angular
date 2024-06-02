@@ -24,9 +24,9 @@ export class AppComponent {
 
   heading = 'this is heading';
   studentList = [
-    { id: 1, name: 'abhishek', age: 25 },
-    { id: 2, name: 'rahul', age: 30 },
-    { id: 3, name: 'raj', age: 35 }
+    { id: 1, name: 'Abhishek shashikant shelke', age: 25,percentage:80 },
+    { id: 2, name: 'Ganesh dilip pawar', age: 30,percentage:50 },
+    { id: 3, name: 'Hemant vilas mane', age: 35,percentage:40 }
   ];
   has = true;
   toggleHasPermission(ev: any) {
@@ -40,4 +40,5 @@ export class AppComponent {
     mobile: "",
     email:""
   }
+  bgColor=1;
 }
