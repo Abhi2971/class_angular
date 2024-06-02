@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { ProductComponent } from './product/product.component';
 import { StudentModule } from './student/student.module';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProductComponent, StudentModule, CommonModule],
+  imports: [RouterOutlet, ProductComponent, StudentModule, CommonModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -28,8 +29,15 @@ export class AppComponent {
     { id: 3, name: 'raj', age: 35 }
   ];
   has = true;
-  toggleHasPermission(ev:any){
-    this.has=!this.has;
+  toggleHasPermission(ev: any) {
+    this.has = !this.has;
   }
-  num2=20;
+  num2 = 20;
+  student = {
+    userName: "",
+    dob: "",
+    age: "",
+    mobile: "",
+    email:""
+  }
 }

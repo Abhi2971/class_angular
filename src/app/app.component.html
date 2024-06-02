@@ -45,3 +45,31 @@
       <div *ngSwitchCase="20"> num is 20</div>
       <div *ngSwitchCase="30"> num is 30</div>
     </div>
+
+    <!-- ATTRIBUTE DIRECTIVE -->
+
+    <div>
+      <div>
+        <label> name </label>
+        <input type="text" name="userName" id="userName" [(ngModel)]="student.userName" />
+      </div>
+      <div>
+        <label> dob </label>
+        <input type="date" name="dob" id="dob" [(ngModel)]="student.dob" />
+      </div>
+      <div>
+        <label> age </label>
+        <input type="text" name="age" id="age" [(ngModel)]="student.age" />
+      </div>
+      <div>
+        <label> mobile number </label>
+        <input type="text" name="mobile" id="mobile" [(ngModel)]="student.mobile" />
+      </div>
+      <div>
+        <label> email </label>
+        <input type="email" name="email" id="email" [(ngModel)]="student.email" />
+      </div>
+    </div>
+    <div>
+      {{student|json}}
+    </div>
