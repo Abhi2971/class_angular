@@ -11,7 +11,7 @@
 
     <h1 [innerHTML]="heading"></h1>
     <!-- NGFOR -->
-    <table  border="5px">
+    <table border="5px">
       <thead>
         <tr>
           <th>Id</th>
@@ -21,8 +21,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let single of studentList"
-        [ngClass]="{
+        <tr *ngFor="let single of studentList" [ngClass]="{
           'bg-success': single.percentage >= 80,
           'bg-warning': single.percentage > 50 && single.percentage < 80,
           'bg-danger': single.percentage <= 50
@@ -82,11 +81,11 @@
     </div>
 
     <!-- NG CLASS -->
-    
+
     <div [ngClass]="bgColor==1 ? 'bg-red' : 'bg-blue'">ngClass</div>
-    
+
     <!-- NG CLASS WITH OBJECT -->
-    
+
     <div [ngClass]="{
       'bg-red':bgColor == 1,
       'bg-blue':bgColor !== 1
@@ -94,7 +93,7 @@
 
     <!-- NG STYLE -->
 
-    <table  border="5px">
+    <table border="5px">
       <thead>
         <tr>
           <th>Id</th>
@@ -104,8 +103,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let single of studentList"
-        [ngStyle]="{
+        <tr *ngFor="let single of studentList" [ngStyle]="{
           color:single.percentage<80? 'red' : 'green',
         }">
           <td>{{ single.id }}</td>
@@ -116,12 +114,24 @@
       </tbody>
       <tfoot></tfoot>
     </table>
-    <app-add-student
-    *ngIf="destroy==false" 
-    [name]="student1.name"
-    [title]="student1.title"
-    [email]="student1.email"
-    [mobile]="student1.mobile"
+    <app-add-student *ngIf="destroy==false" [name]="student1.name" [title]="student1.title" [email]="student1.email"
+      [mobile]="student1.mobile" (buttonClicked)="buttonClickedEventHandler($event)"></app-add-student>
 
-    (buttonClicked)="buttonClickedEventHandler($event)"
-    ></app-add-student>
+    <!-- PIPE -->
+
+    {{currentDate|date:"dd MMM yyyy hh:mm:ss"}}
+
+    <!-- UPPERCASE -->
+    <div>
+      {{title1|uppercase}}
+    </div>
+    <!-- LOWERCASE -->
+    <div>
+      {{title1|lowercase}}
+    </div>
+    <!-- TITLE -->
+    <div>
+      {{title1|titlecase}}
+    </div>
+
+

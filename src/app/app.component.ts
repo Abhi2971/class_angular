@@ -49,17 +49,19 @@ export class AppComponent {
   }
   bgColor = 1;
 
-student1 = {
-  title: "student details",
-  name: "payal shinde",
-  age: "20",
-  email: "p@gmail.com",
-  mobile: "9766502971"
-}
-destroy=false;
-buttonClickedEventHandler(ev :any){
-  console.log(ev);
-  alert(ev);
-  this.destroy=true;
-}
+  student1 = {
+    title: "student details",
+    name: "payal shinde",
+    age: "20",
+    email: "p@gmail.com",
+    mobile: "9766502971"
+  }
+  destroy = false;
+  buttonClickedEventHandler(ev: any) {
+    console.log(ev);
+    alert(ev);
+    this.destroy = true;
+  }
+  currentDate=new Date();
+  title1="heLLo I aM Abhi";
 }
