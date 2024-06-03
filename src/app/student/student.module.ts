@@ -11,7 +11,7 @@ import { DeletStudentComponent } from './component/delet-student/delet-student.c
     AddStudentComponent,
     StudentListComponent,
     ViewStudentComponent,
-    DeletStudentComponent
+    DeletStudentComponent,
   ],
   imports: [CommonModule],
   exports: [
